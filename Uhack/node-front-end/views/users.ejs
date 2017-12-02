@@ -1,0 +1,28 @@
+<% include /partials/header %>
+<div class="container">
+<h1>Users Management</h1>
+<table class="table users">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Birthday</th>
+      <th scope="col">Address</th>
+      <th scope="col">Contact No.</th>
+    </tr>
+  </thead>
+  <tbody>
+
+<% data.forEach(function(d) { %>
+    <tr>
+      <td><%= d.id %></td>
+      <td><%= d.name %></td>
+      <td><%= d.birthday %></td>
+      <td><%= d.address %></td>
+      <td><%= d.contact %></td>
+    </tr>
+  <% }); %>
+</div>
+
+
+<% include /partials/footer %>
